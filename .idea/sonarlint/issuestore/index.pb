@@ -67,3 +67,11 @@ Sapp/src/main/java/course/examples/ui/wtw/feature/evetmanagement/EventViewModel.
 Uapp/src/main/java/course/examples/ui/wtw/feature/evetmanagement/ui/EventFragment.java,4/0/409458aac99b74b851d729db9e2d43edfa8ca49a
 Œ
 \app/src/main/java/course/examples/ui/wtw/feature/evetmanagement/ui/adapter/EventAdapter.java,1/e/1e045b91d383a550e79c18e59f663b2f5c84d616
+h
+8app/src/main/java/course/examples/ui/wtw/MainActivity.kt,a/4/a4180b42861a06d2562c6255dd5b77d8dae89dd7
+v
+Fapp/src/main/java/course/examples/ui/wtw/feature/common/Constants.java,9/e/9e8c32090fa138ec684f57d3a48a916470a7c56a
+y
+Iapp/src/main/java/course/examples/ui/wtw/feature/common/BaseActivity.java,b/8/b877150103e2f55c3eca44c3529cbc85ac7469c1
+j
+:app/src/main/java/course/examples/ui/wtw/ui/theme/Theme.kt,4/e/4e9096bf44e659e15d938fe900f16bd9419992bb
