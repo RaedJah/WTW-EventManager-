@@ -1,0 +1,4 @@
+package course.examples.ui.wtw.network;
+
+public class RetrofitInstance {
+}
