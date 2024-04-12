@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="Theme.WTW" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.WTW" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <!-- Customize primary dark color -->
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <!-- Customize accent color -->
+        <item name="colorAccent">@color/accentColor</item>
+</style>
+    <color name="primaryColor">#2196F3</color>
+    <color name="primaryDarkColor">#1976D2</color>
+    <color name="accentColor">#FF4081</color>
+    <!-- Customize accent color -->
 </resources>
