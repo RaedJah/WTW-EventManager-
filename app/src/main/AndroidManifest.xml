@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WTW"
         tools:targetApi="31">
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -22,6 +24,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="true"
+            android:label="@string/title_activity_sign_up"
+            android:theme="@style/Theme.WTW">
+            <!-- No intent-filter needed unless this is also a direct entry point from the launcher -->
         </activity>
     </application>
 

@@ -5,13 +5,14 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
-        google()
+        google()  // Google's Maven repository
         mavenCentral()
     }
 }
-
 rootProject.name = "WTW"
 include(":app")

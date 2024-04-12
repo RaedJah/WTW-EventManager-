@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1088992545593",
+    "project_id": "wtw-eventmanager",
+    "storage_bucket": "wtw-eventmanager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088992545593:android:2dc6cd63fe596aec5136e8",
+        "android_client_info": {
+          "package_name": "course.examples.ui.wtw"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClkmjrptJfTTs38KezPZw-ULlSaRTD3Qs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
