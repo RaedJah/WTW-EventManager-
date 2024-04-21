@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/navigation_communities"
+        android:icon="@drawable/ic_communities"
+        android:title="@string/communities" />
+    <!-- Middle item for creating an event, you might want to use app:showAsAction if needed -->
+    <item
+        android:id="@+id/navigation_create_event"
+        android:icon="@drawable/ic_create_event"
+        android:title="@string/create_event" />
+    <item
+        android:id="@+id/navigation_calendar"
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/calendar" />
+    <item
+        android:id="@+id/navigation_discover"
+        android:icon="@drawable/ic_discover"
+        android:title="@string/discover" />
+</menu>

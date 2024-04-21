@@ -33,6 +33,13 @@
             android:theme="@style/Theme.WTW">
             <!-- No intent-filter needed unless this is also a direct entry point from the launcher -->
         </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:label="Home"
+            android:theme="@style/Theme.WTW">
+            <!-- No intent-filter needed unless this is also a direct entry point from the launcher -->
+        </activity>
     </application>
 
 </manifest>

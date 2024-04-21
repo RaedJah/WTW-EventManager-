@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">WTW</string>
     <string name="title_activity_sign_up">Sign Up</string>
+    <string name="event_image">Description\n</string>
+    <string name="fri_may_26_18_00">Fri, May 26 - 18:00</string>
+    <string name="hosted_by_random_user">Hosted By: Random User</string>
+    <string name="event_title">Event Title</string>
+    <string name="events_around_me">Events Around Me</string>
+    <string name="home">Home\n</string>
+    <string name="Communities">Communities</string>
+    <string name="calendar">Calendar\n\n</string>
+    <string name="discover">Discover</string>
+    <string name="create_event">Create Event</string>
+    <string name="communities">Communities\n</string>
 </resources>
