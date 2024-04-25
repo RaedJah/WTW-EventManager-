@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+
+    <!-- Top Navigation with Icons -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:background="?attr/colorPrimary"
+        app:title="Home"
+        app:titleTextColor="@color/white"
+        app:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp">
+
+        <!-- Add icons and logo here -->
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Hashtag Chips -->
+    <HorizontalScrollView
+        android:id="@+id/hashtag_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:scrollbars="none"
+        android:paddingTop="8dp">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleLine="true">
+            <!-- Dynamically add Chips here in your Activity code -->
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <!-- Events Around Me Section Label -->
+    <TextView
+        android:id="@+id/events_around_me_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hashtag_scrollview"
+        android:padding="16dp"
+        android:text="@string/events_around_me"
+        android:textColor="@color/purple_200"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <!-- Events Around Me Section -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/events_around_me_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/events_around_me_label"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"/>
+
+    <!-- Upcoming Events Carousel Label -->
+    <TextView
+        android:id="@+id/upcoming_events_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/events_around_me_recyclerview"
+        android:text="@string/upcoming_events"
+        android:textColor="@color/purple_200"
+        android:padding="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+    <!-- Upcoming Events Carousel -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/upcoming_events_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upcoming_events_label"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</RelativeLayout>

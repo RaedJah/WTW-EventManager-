@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFE0"> <!-- Very light shade of yellow -->
+    android:background= "#121212"> <!-- Very light shade of yellow -->
 
     <!-- WTW Label -->
     <TextView
@@ -22,6 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome"
+        android:textColor="@color/purple_200"
         android:textSize="24sp"
         android:layout_below="@id/wtwLabel"
         android:layout_centerHorizontal="true"
@@ -31,8 +32,9 @@
         android:id="@+id/introText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lets Get Started with Login"
+        android:text="@string/lets_get_started_with_login"
         android:textSize="16sp"
+        android:textColor="@color/purple_200"
         android:layout_below="@id/welcomeText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"/>
@@ -42,8 +44,9 @@
         android:id="@+id/emailEditText"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:hint="Enter Email"
+        android:hint="@string/enter_email"
         android:inputType="textEmailAddress"
+        android:textColor = "@color/purple_200"
         android:layout_below="@id/introText"
         android:layout_marginTop="32dp"
         android:layout_marginStart="32dp"
@@ -64,7 +67,7 @@
         android:layout_height="60dp"
         android:hint="Enter Password"
         android:inputType="textPassword"
-        android:textColor ="#666362"
+        android:textColor ="@color/purple_200"
         android:layout_marginTop="16dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
@@ -82,19 +85,19 @@
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:textColor="#FFFFFF"
-        android:background="#FDEFB2"
         android:layout_below="@id/forgotPasswordText"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"/>
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background= "@color/purple_200"
+        android:text="@string/login"
+        android:textColor="#546E7A" />
     <TextView
         android:id="@+id/forgotPasswordText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Password?"
-        android:textColor="#0000FF"
+        android:textColor="#000000"
         android:layout_below="@id/passwordEditText"
         android:layout_marginTop="8dp"
         android:layout_centerHorizontal="true"/>
@@ -104,19 +107,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="OR Login with"
+        android:textColor="@color/purple_200"
         android:layout_below="@id/loginButton"
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"/>
+
     <Button
         android:id="@+id/signUpButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign Up"
-        android:textColor="#FFFFFF"
-        android:background="#FDEFB2"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="32dp"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"/>
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background= "@color/purple_200"
+        android:text="Sign Up"
+        android:textColor="#546E7A" />
 
 </RelativeLayout>

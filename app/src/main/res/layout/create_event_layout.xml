@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background= "#121212"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_200"
+        android:text="@string/create_event_decription_page" />
+
+
+
+    <!-- Event Name EditText -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_event_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/event_name"
+        android:textColorHint="@color/purple_200">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/event_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@color/purple_200"
+            android:backgroundTint="@color/purple_200"
+            android:textColorHint="@color/purple_200"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Event Description EditText -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_event_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_event_name"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/event_description"
+        android:textColorHint="@color/purple_200">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/event_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:backgroundTint="@color/purple_200"
+            android:textColor="@color/purple_200" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Toggle Button for Private/Public -->
+    <ToggleButton
+        android:id="@+id/public_private_button"
+        android:layout_below="@id/layout_event_description"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/edit_text_background"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:textColorHint="@color/purple_200"
+        android:textOff="@string/private_event"
+        android:textOn="@string/public_event"
+        android:textColor="@color/purple_200" />
+
+    <!-- Event Time EditText -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_event_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/public_private_button"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/event_time"
+
+
+        android:textColorHint="@color/purple_200">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/event_time"
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/purple_200"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@color/purple_200"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Button to Upload Thumbnail -->
+    <Button
+        android:id="@+id/button_upload_thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_event_time"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:background="@color/purple_200"
+        android:text="@string/upload_thumbnail"
+        android:textColor="#546E7A" />
+
+    <!-- Image Thumbnail -->
+    <ImageView
+        android:id="@+id/image_thumbnail"
+        android:layout_width="84dp"
+        android:layout_height="81dp"
+        android:layout_below="@id/button_upload_thumbnail"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+
+        android:background="@drawable/upload_image_placeholder"
+        android:backgroundTint="@color/purple_200"
+        android:contentDescription="@string/thumbnail_image_description"
+        android:scaleType="centerCrop"
+        android:textColorHint="@color/purple_200" />
+
+    <!-- Continue Button -->
+    <Button
+        android:id="@+id/continue_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_thumbnail"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/purple_200"
+        android:text="@string/continuee"
+        android:textColor="#546E7A" />
+
+</RelativeLayout>

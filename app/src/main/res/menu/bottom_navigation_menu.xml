@@ -8,6 +8,7 @@
         android:id="@+id/navigation_communities"
         android:icon="@drawable/ic_communities"
         android:title="@string/communities" />
+
     <!-- Middle item for creating an event, you might want to use app:showAsAction if needed -->
     <item
         android:id="@+id/navigation_create_event"

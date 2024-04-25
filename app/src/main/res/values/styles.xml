@@ -5,10 +5,26 @@
         <!-- Customize primary dark color -->
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <!-- Customize accent color -->
-        <item name="colorAccent">@color/accentColor</item>
-</style>
-    <color name="primaryColor">#2196F3</color>
-    <color name="primaryDarkColor">#1976D2</color>
+        <item name="colorAccent">@color/white</item>
+
+    </style>
+    <style name="BottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">
+        <!-- Color for the unselected icon -->
+        <item name="itemIconTint">@color/bottomNavigationInactive</item>
+        <!-- Color for the selected icon -->
+        <item name="itemTextColor">@color/bottomNavigationActive</item>
+    </style>
+    <style name="Widget.Button.Colored" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/button_background</item>
+        <item name="android:textColor">@color/white</item>
+        <!-- Optionally add other styling rules here -->
+    </style>
+    <color name="primaryColor">#CBA4A4</color>
+    <color name="primaryDarkColor">#CBA4A4</color>
     <color name="accentColor">#FF4081</color>
+
+
     <!-- Customize accent color -->
 </resources>
+
+

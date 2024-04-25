@@ -7,9 +7,21 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import course.examples.ui.wtw.fragments.*
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import course.examples.ui.wtw.adapter.EventAdapter
+import course.examples.ui.wtw.fragments.*
+import course.examples.ui.wtw.model.Event
+
+
+
 
 @Suppress("DEPRECATION")
 class HomeActivity : AppCompatActivity() {
+
+        private lateinit var upcomingEventsRecyclerView: RecyclerView
+        private lateinit var eventsAroundMeRecyclerView: RecyclerView
         override fun onCreate(savedInstanceState: Bundle?) {
                 super.onCreate(savedInstanceState)
                 setContentView(R.layout.activity_home)

@@ -1,15 +1,37 @@
-<resources>
-    <string name="app_name">WTW</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="DuplicateDefinition">WTW</string>
     <string name="title_activity_sign_up">Sign Up</string>
-    <string name="event_image">Description\n</string>
-    <string name="fri_may_26_18_00">Fri, May 26 - 18:00</string>
+    <string name="event_image">Description</string>
+    <string name="fri_may_26_18_00">Fri, May 26 – 18:00</string>
     <string name="hosted_by_random_user">Hosted By: Random User</string>
     <string name="event_title">Event Title</string>
     <string name="events_around_me">Events Around Me</string>
-    <string name="home">Home\n</string>
+    <string name="home">Home</string>
     <string name="Communities">Communities</string>
-    <string name="calendar">Calendar\n\n</string>
+    <string name="calendar">Calendar</string>
     <string name="discover">Discover</string>
     <string name="create_event">Create Event</string>
-    <string name="communities">Communities\n</string>
+    <string name="communities">Communities</string>
+    <string name="lets_get_started_with_login">Lets Get Started with Login</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="login">Login</string>
+    <string name="email_address">Email Address</string>
+    <string name="upload_thumbnail_button_label" tools:ignore="DuplicateDefinition">Add a poster</string>
+    <string name="thumbnail_image_description">Description</string>
+    <string name="event_name_hint">Event Name</string>
+    <string name="event_description_hint">Describe your event</string>
+    <string name="invite_friends_hint">Invite Friends</string>
+    <string name="public_private">Public/Private Event</string>
+    <string name="public_event">Public</string>
+    <string name="private_event">Private</string>
+    <string name="event_description">Describe your event</string>
+    <string name="music_recommendations">Music recommendations</string>
+    <string name="continuee">Continue</string>
+    <string name="upload_thumbnail">Upload</string>
+    <string name="event_time">Event Time</string>
+    <string name="event_name">Event Name</string>
+    <string name="create_event_decription_page">Create an event!</string>
+    <string name="upcoming_events">Upcoming Events</string>
+
+
 </resources>

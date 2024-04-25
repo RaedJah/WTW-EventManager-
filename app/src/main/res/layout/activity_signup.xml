@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFE0"
+    android:background="#121212"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".SignUpActivity">
@@ -13,101 +13,120 @@
         android:id="@+id/wtwLabel"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:text="WTW"
-        android:fontFamily="@font/hixon_font"
-        android:textSize="58sp"
-        android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/purple_200"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="30dp"
-        android:layout_marginStart="100dp"/>
+        android:fontFamily="@font/hixon_font"
+        android:text="WTW"
+        android:textColor="@color/purple_200"
+        android:textSize="58sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/introText"
+        android:layout_width="449dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="16dp"
+        android:text="Lets begin with creating an account!"
+        android:textColor="@color/purple_200"
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/fullNameEditText"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/edit_text_background"
         android:hint="Full Name"
         android:inputType="textPersonName"
-        android:background="@drawable/edit_text_background"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="32dp"
-        android:textColor="@color/white"
-        android:layout_marginEnd="32dp"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp"
         android:paddingTop="8dp"
+        android:paddingEnd="16dp"
         android:paddingBottom="8dp"
-        />
+        android:textColor="@color/white"
+        android:textColorHint="@color/purple_200" />
 
     <!-- Email EditText -->
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:hint="Email Address"
-        android:inputType="textEmailAddress"
-        android:background="@drawable/edit_text_background"
-        android:layout_marginTop="32dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:autofillHints=""
+        android:background="@drawable/edit_text_background"
+        android:hint="@string/email_address"
+        android:inputType="textEmailAddress"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp"
         android:paddingTop="8dp"
-        android:paddingBottom="8dp"/>
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:textColorHint="@color/purple_200" />
 
     <!-- Username EditText -->
     <EditText
         android:id="@+id/usernameEditText"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:hint="Username"
-        android:background="@drawable/edit_text_background"
-        android:layout_marginTop="32dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Username"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp"
         android:paddingTop="8dp"
-        android:paddingBottom="8dp"/>
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:textColorHint="@color/purple_200" />
 
     <!-- Password EditText -->
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/edit_text_background"
         android:hint="Password"
         android:inputType="textPassword"
-        android:background="@drawable/edit_text_background"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp"
         android:paddingTop="8dp"
-        android:paddingBottom="8dp"/>
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:textColorHint="@color/purple_200" />
 
     <!-- Confirm Password EditText -->
     <EditText
         android:id="@+id/confirmPasswordEditText"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/edit_text_background"
         android:hint="Confirm Password"
         android:inputType="textPassword"
-        android:background="@drawable/edit_text_background"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp"
         android:paddingTop="8dp"
-        android:paddingBottom="8dp"/>
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:textColorHint="@color/purple_200" />
 
     <!-- Create Account Button -->
     <Button
         android:id="@+id/createAccountButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create An Account"
         android:layout_marginTop="16dp"
-        android:background="#FDEFB2"/>
+        android:background="@color/purple_200"
+        android:text="Create An Account" />
 </LinearLayout>
+
