@@ -4,33 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#121212">
+
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></FrameLayout>
+        android:layout_height="match_parent"
+        />
 
 
     <!-- Top Navigation with Icons -->
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_width="match_parent"
-        android:background="?attr/colorPrimary"
-        app:title="Home"
-        app:titleTextColor="@color/white"
-        app:contentInsetStart="0dp"
-        app:contentInsetLeft="0dp">
-
-        <!-- Add icons and logo here -->
-
-    </androidx.appcompat.widget.Toolbar>
 
     <!-- Hashtag Chips -->
     <HorizontalScrollView
         android:id="@+id/hashtag_scrollview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
         android:scrollbars="none"
         android:paddingTop="8dp">
 

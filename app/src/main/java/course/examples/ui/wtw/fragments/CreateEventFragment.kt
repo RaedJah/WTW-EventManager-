@@ -17,6 +17,10 @@ import android.widget.Toast
 import android.widget.ToggleButton
 import androidx.fragment.app.Fragment
 import course.examples.ui.wtw.R
+import androidx.lifecycle.ViewModelProvider
+import course.examples.ui.wtw.model.Event
+import course.examples.ui.wtw.viewmodels.EventViewModel
+import java.util.UUID
 
 class CreateEventFragment : Fragment() {
 
@@ -24,6 +28,7 @@ class CreateEventFragment : Fragment() {
         private const val IMAGE_PICK_REQUEST = 1001
     }
 
+    private lateinit var viewModel: EventViewModel
     private lateinit var eventName: EditText
     private lateinit var eventDescription: EditText
     private lateinit var togglePrivatePublic: ToggleButton
@@ -31,12 +36,14 @@ class CreateEventFragment : Fragment() {
     private lateinit var continueButton: Button
     private lateinit var uploadThumbnailButton: Button
     private lateinit var imageViewThumbnail: ImageView
+    private var imageUri: Uri? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.create_event_layout, container, false)
+        viewModel = ViewModelProvider(requireActivity()).get(EventViewModel::class.java)
 
         eventName = view.findViewById(R.id.event_name)
         eventDescription = view.findViewById(R.id.event_description)
@@ -62,10 +69,20 @@ class CreateEventFragment : Fragment() {
         val time = eventTime.text.toString()
 
         if (validateInput(name, description, time)) {
+            val event = Event(
+                id = UUID.randomUUID().toString(),
+                title = name,
+                description = description,
+                host = "Host Username or ID", // Adjust as needed
+                imageUrl = imageUri.toString(), // Handle image URL properly if using Firebase Storage
+                time = time,
+                location = "Specify Location", // Add field for location if required
+                category = "Specify Category", // Add field for category selection if required
+                isPrivate = isPublic
+            )
+            viewModel.addEvent(event)
             Toast.makeText(context, "Event Created: $name", Toast.LENGTH_SHORT).show()
-            //TO DO THIS I NEED A FRIENDS LIST TO ACCESS THE DATABASE AND FRIENDS AS WELL AS WAYS TO ADD NEW FREINDS MAYBE SEARCH ACROOS A FREE FIREBASE FOR FRIENDS
-            //ANOTHER FORM TO ADD INVITEES AND TO
-            // Here you can interact with ViewModel or navigate to another Fragment
+            clearForm()
         } else {
             Toast.makeText(context, "Please fill all fields correctly", Toast.LENGTH_SHORT).show()
         }
@@ -85,8 +102,16 @@ class CreateEventFragment : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == IMAGE_PICK_REQUEST && resultCode == Activity.RESULT_OK) {
-            val selectedImageUri: Uri? = data?.data
-            imageViewThumbnail.setImageURI(selectedImageUri)
+            imageUri = data?.data
+            imageViewThumbnail.setImageURI(imageUri)
         }
+    }
+
+    private fun clearForm() {
+        eventName.setText("")
+        eventDescription.setText("")
+        eventTime.setText("")
+        togglePrivatePublic.isChecked = false
+        imageViewThumbnail.setImageResource(0) // Reset or set to a default image
     }
 }

@@ -9,8 +9,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import course.examples.ui.wtw.R
 import course.examples.ui.wtw.model.Event
+import com.bumptech.glide.Glide
 
-class EventAdapter(private val events: List<Event>) : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
+
+
+class EventAdapter(private var events: List<Event>) : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
 
     class EventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val titleTextView: TextView = itemView.findViewById(R.id.event_title)
@@ -22,9 +25,10 @@ class EventAdapter(private val events: List<Event>) : RecyclerView.Adapter<Event
             titleTextView.text = event.title
             hostTextView.text = event.host
             timeTextView.text = event.time
-            // Load image using a library like Glide or Picasso
-            // For example, using a drawable resource:
-            // imageView.setImageResource(event.imageUrl.toInt())
+            // Use Glide to load the image
+            Glide.with(itemView.context)
+                .load(event.imageUrl)
+                .into(imageView)
         }
     }
 
@@ -38,4 +42,9 @@ class EventAdapter(private val events: List<Event>) : RecyclerView.Adapter<Event
     }
 
     override fun getItemCount() = events.size
+
+    fun updateEvents(newEvents: List<Event>) {
+        this.events = newEvents
+        notifyDataSetChanged()
+    }
 }

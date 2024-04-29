@@ -59,8 +59,6 @@ y
 Iapp/src/main/java/course/examples/ui/wtw/fragments/CommunitiesFragment.kt,9/3/93e21df513c9a5972941a0f483a5970abe2055f3
 y
 Iapp/src/main/java/course/examples/ui/wtw/fragments/CreateEventFragment.kt,9/2/92ea784f259b33dd9e10bfa333f44ce78808e175
-p
-@app/src/main/java/course/examples/ui/wtw/feature/HomeFragment.kt,1/d/1d790a3294a4250361b410daa6182fdf73901dbc
 j
 :app/src/main/java/course/examples/ui/wtw/ui/theme/Color.kt,9/6/966544ec7607b3a5becd043b6ba5961ffc2e4583
 i
@@ -69,3 +67,7 @@ k
 ;app/src/main/java/course/examples/ui/wtw/model/UserDao.java,5/c/5c42e690924464125be1b9c6652563c395d12077
 o
 ?app/src/main/java/course/examples/ui/wtw/model/AppDatabase.java,2/7/27b9ac1233b149add2f7d16253ad7396fe2cfe70
+u
+Eapp/src/main/java/course/examples/ui/wtw/viewmodels/EventViewModel.kt,7/7/77bcf6e9ee5a786eabb201bec0c2b4f25b575d75
+v
+Fapp/src/main/java/course/examples/ui/wtw/repository/EventRepository.kt,2/f/2fb0f7a255ae97522d221fd1b7780e4253e96dac
