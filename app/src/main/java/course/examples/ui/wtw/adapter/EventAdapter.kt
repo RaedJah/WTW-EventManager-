@@ -1,6 +1,7 @@
 package course.examples.ui.wtw.adapter
 
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,16 +34,20 @@ class EventAdapter(private var events: List<Event>) : RecyclerView.Adapter<Event
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_event, parent, false)
-        return EventViewHolder(view)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_event, parent, false)
+        return EventViewHolder(itemView)
     }
 
+
+
     override fun onBindViewHolder(holder: EventViewHolder, position: Int) {
-        holder.bind(events[position])
+        val event = events[position]
+        holder.bind(event)
     }
 
     override fun getItemCount() = events.size
 
+    @SuppressLint("NotifyDataSetChanged")
     fun updateEvents(newEvents: List<Event>) {
         this.events = newEvents
         notifyDataSetChanged()

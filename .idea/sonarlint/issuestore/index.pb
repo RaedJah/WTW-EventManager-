@@ -71,3 +71,7 @@ u
 Eapp/src/main/java/course/examples/ui/wtw/viewmodels/EventViewModel.kt,7/7/77bcf6e9ee5a786eabb201bec0c2b4f25b575d75
 v
 Fapp/src/main/java/course/examples/ui/wtw/repository/EventRepository.kt,2/f/2fb0f7a255ae97522d221fd1b7780e4253e96dac
+l
+<app/src/main/java/course/examples/ui/wtw/CommunityMembers.kt,a/2/a2732ac232586e1aa6fc0d25b096330561163d7c
+j
+:app/src/main/java/course/examples/ui/wtw/MembersAdapter.kt,3/1/31d695ff28ba795aae8ab63054f74aa24fa01a9d

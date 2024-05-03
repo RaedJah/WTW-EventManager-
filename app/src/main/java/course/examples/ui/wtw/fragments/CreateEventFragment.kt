@@ -62,6 +62,8 @@ class CreateEventFragment : Fragment() {
         uploadThumbnailButton.setOnClickListener { openImagePicker() }
     }
 
+
+
     private fun createEvent() {
         val name = eventName.text.toString()
         val description = eventDescription.text.toString()
@@ -82,6 +84,8 @@ class CreateEventFragment : Fragment() {
             )
             viewModel.addEvent(event)
             Toast.makeText(context, "Event Created: $name", Toast.LENGTH_SHORT).show()
+
+
             clearForm()
         } else {
             Toast.makeText(context, "Please fill all fields correctly", Toast.LENGTH_SHORT).show()
@@ -114,4 +118,6 @@ class CreateEventFragment : Fragment() {
         togglePrivatePublic.isChecked = false
         imageViewThumbnail.setImageResource(0) // Reset or set to a default image
     }
+
+
 }

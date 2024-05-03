@@ -29,9 +29,8 @@ class HomeFragment : Fragment() {
         viewModel = ViewModelProvider(requireActivity())[EventViewModel::class.java]
 
         // Setup RecyclerView
-        recyclerView = view.findViewById(R.id.events_around_me_recyclerview)
-        recyclerView.layoutManager = LinearLayoutManager(context)
-        eventAdapter = EventAdapter(emptyList())  // Initialize with empty list
+        recyclerView = view.findViewById(R.id.upcoming_events_recyclerview)
+        eventAdapter = EventAdapter(emptyList())
         recyclerView.adapter = eventAdapter
 
         observeEvents()
@@ -40,7 +39,6 @@ class HomeFragment : Fragment() {
     }
 
     private fun observeEvents() {
-        // Observing the LiveData from ViewModel which holds the list of events
         viewModel.eventsLiveData.observe(viewLifecycleOwner) { events ->
             // Update the adapter's data when the list of events changes
             eventAdapter.updateEvents(events)
@@ -51,4 +49,5 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel.fetchEvents()  // Fetch events when the fragment view is created
     }
+
 }

@@ -1,49 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#121212"
-    >
+    android:background="#121212">
 
     <ImageView
         android:id="@+id/event_image"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
-    android:src="@drawable/ic_mock_2"
-    android:contentDescription="@string/event_image"
-    android:padding="8dp" />
+        android:src="@drawable/upcoming_events"
+        android:contentDescription="@string/event_image" />
 
     <TextView
         android:id="@+id/event_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Spring Party Weekend"
-        android:textSize="18sp"
+        android:text="E-Sports Tournament"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/purple_200"
-    android:padding="8dp" />
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp" />
 
     <TextView
         android:id="@+id/event_host"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hosted_by_random_user"
-        android:textSize="14sp"
+        android:text="Hosted by: Jah"
+        android:textSize="16sp"
         android:textColor="@color/primaryDarkColor"
-    android:padding="8dp" />
+        android:paddingBottom="4dp" />
 
     <TextView
         android:id="@+id/event_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/fri_may_26_18_00"
-        android:textSize="14sp"
+        android:text="UPCOMING"
+        android:textSize="16sp"
         android:textColor="@color/primaryDarkColor"
-    android:paddingBottom="16dp"
-    android:padding="8dp" />
+        android:paddingBottom="16dp" />
 
     <!-- Add other views if necessary -->
 

@@ -21,7 +21,6 @@ class EventViewModel : ViewModel() {
             }
         }
     }
-
     fun fetchEvents() {
         viewModelScope.launch {
             repository.getEventsFromFirestore { events ->

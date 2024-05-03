@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#121212">
@@ -20,13 +21,90 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="none"
-        android:paddingTop="8dp">
+        android:paddingTop="25dp">
 
         <com.google.android.material.chip.ChipGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:singleLine="true">
-            <!-- Dynamically add Chips here in your Activity code -->
+
+<!--            &lt;!&ndash; Fake Chips &ndash;&gt;-->
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:id="@+id/chip_1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/music"-->
+<!--                android:textColor="@color/purple_200"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+<!--                style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                android:background="@drawable/hashtag_chip_background"/>-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:id="@+id/chip_2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/art"-->
+<!--                android:textColor="@color/purple_200"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+<!--                style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                android:background="@drawable/hashtag_chip_background"/>-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:id="@+id/chip_3"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/food"-->
+<!--                android:textColor="@color/purple_200"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+<!--                style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                android:background="@drawable/hashtag_chip_background"/>-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:id="@+id/chip_4"-->
+<!--                style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/hashtag_chip_background"-->
+<!--                android:text="@string/cooking"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+<!--                android:textColor="@color/purple_200"-->
+<!--                tools:ignore="TouchTargetSizeCheck" />-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:id="@+id/chip_5"-->
+<!--                style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/hashtag_chip_background"-->
+<!--                android:text="#Party"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+<!--                android:textColor="@color/purple_200"-->
+<!--                tools:ignore="HardcodedText,TouchTargetSizeCheck" />-->
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:id="@+id/chip_"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/musicteo"-->
+<!--                android:textColor="@color/purple_200"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+<!--                style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                android:background="@drawable/hashtag_chip_background"/>-->
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:id="@+id/chip_6"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/movies"-->
+<!--                android:textColor="@color/purple_200"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+<!--                style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                android:background="@drawable/hashtag_chip_background"/>-->
+
+
+
+
+
+            <!-- Add more fake chips as needed -->
+
         </com.google.android.material.chip.ChipGroup>
     </HorizontalScrollView>
 
@@ -37,7 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/hashtag_scrollview"
         android:padding="16dp"
-        android:text="@string/events_around_me"
+        android:text="Welcome!"
         android:textColor="@color/purple_200"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -45,10 +123,13 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/events_around_me_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="10dp"
         android:layout_below="@id/events_around_me_label"
+        android:padding="5dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"/>
+        app:spanCount="2" />
+
+
 
     <!-- Upcoming Events Carousel Label -->
     <TextView
@@ -73,6 +154,32 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <include
+        android:id="@+id/fake_event_upcoming_1"
+        layout="@layout/item_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upcoming_events_label"
+        android:layout_marginTop="16dp" />
+
+    <!-- Second fake event in the Upcoming Events Carousel -->
+    <include
+        android:id="@+id/fake_event_upcoming_2"
+        layout="@layout/item_event2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fake_event_upcoming_1"
+        android:layout_marginTop="16dp" />
+
+    <!-- Third fake event in the Upcoming Events Carousel -->
+    <include
+        android:id="@+id/fake_event_upcoming_3"
+        layout="@layout/item_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fake_event_upcoming_2"
+        android:layout_marginTop="16dp" />
 
 
 </RelativeLayout>
