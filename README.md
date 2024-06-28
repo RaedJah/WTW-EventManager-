@@ -14,7 +14,7 @@ Welcome to the WTW-EventManager Android app! Below are some screenshots showcasi
     <p>Discover Page</p>
   </div>
   <div style="margin: 10px;">
-    <img src="screenshots/login_page.png" alt="Login Page" style="width: 300px;"/>
+    <img src="screenshots/authentication_page.png" alt="Login Page" style="width: 300px;"/>
     <p>Login Page</p>
   </div>
   <div style="margin: 10px;">
